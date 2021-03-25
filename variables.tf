@@ -9,19 +9,21 @@ variable "allowed_availability_zone_identifier" {
   default = ["a", "b"]
 }
 
-locals {
-  my_public_ip = "${data.external.myipaddr.result.ip}"
-}
+# locals {
+#   my_public_ip = "data.external.myipaddr.body"
+# }
 
-data "external" "myipaddr" {
-program = ["bash", "-c", "curl -s 'https://api.ipify.org?format=json'"]
-}
-
-variable "my_public_ip" {
-  description = "Please replace this with your public IP address."
-  type = string
-  default = "var.my_public_ip"
-}
+# data "http" "myipaddr" {
+#   url = "http://icanhazip.com"
+# }
+# variable "my_public_ip" {
+#   description = "Please replace this with your public IP address."
+#   type = string
+#   default = "data.myipaddr"
+# }
+# output "public_ip" {
+#   value = chomp("data.http.myipaddr.body")
+# }
 
 variable "instance_type" {
   description = "The aws instance type, Choose one with a CPU/GPU that fits your need: https://aws.amazon.com/ec2/instance-types/#Accelerated_Computing"
