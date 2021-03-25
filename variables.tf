@@ -20,7 +20,7 @@ program = ["bash", "-c", "curl -s 'https://api.ipify.org?format=json'"]
 variable "my_public_ip" {
   description = "Please replace this with your public IP address."
   type = string
-  default = ${var.my_public_ip}
+  default = "var.my_public_ip"
 }
 
 variable "instance_type" {
