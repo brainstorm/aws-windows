@@ -1,7 +1,7 @@
- ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.12.0-blue.svg)
+ ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14-blue.svg)
 
 
- #  Setup a cloud gaming Windows Virtual Machine on AWS using Terraform
+ #  Setup a cloud Windows Virtual Machine on AWS using Terraform
 
  ## TL'DR
 We are launching a few commands on MacOS Terminal to install Terraform, link it to our AWS account, spin up a Windows Virtual Machine at very high specs on demand on AWS, auto-install Steam/Epic Launcher, and use it for playing AAA games.
@@ -9,7 +9,7 @@ This works on any client, great if you have an old MacBook and you want to play 
 
  ## Quick start
 
- **Note**: This project deploys resources into your AWS account. You **WILL BE** charged money for running this. Gaming instance like the g4dn.xlarge are billed at around £0.4/hour ([Prices here](https://aws.amazon.com/ec2/instance-types/g4/)). 
+ **Note**: This project deploys resources into your AWS account. You **WILL BE** charged money for running this. A GPU instance like the g4dn.xlarge are billed at around £0.4/hour ([Prices here](https://aws.amazon.com/ec2/instance-types/g4/)). 
  If you use it a couple of hours every day it's only £10~20/month. 
  If you leave it running 24/7 it will cost you up to £300/month if left running 24/7 D: 
  Follow my instructions to terminate the machine when not in use.
