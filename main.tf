@@ -32,7 +32,7 @@ resource "aws_ssm_parameter" "password" {
   value = random_password.password.result
 
   tags = {
-    App = "aws-cloud"
+    App = "desktop-windows"
   }
 }
 
@@ -40,7 +40,7 @@ resource "aws_security_group" "default" {
   name = "cloud-sg"
 
   tags = {
-    App = "aws-cloud"
+    App = "desktop-cloud"
   }
 }
 
@@ -96,7 +96,7 @@ resource "aws_iam_role" "windows_instance_role" {
 EOF
 
   tags = {
-    App = "aws-cloud"
+    App = "desktop-windows"
   }
 }
 
@@ -182,7 +182,7 @@ resource "aws_spot_instance_request" "windows_instance" {
 
   tags = {
     Name = "cloud-instance"
-    App = "aws-cloud"
+    App = "desktop-windows"
   }
 }
 
